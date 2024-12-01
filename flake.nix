@@ -176,6 +176,10 @@
           loginwindow.PowerOffDisabledWhileLoggedIn = true;
           loginwindow.RestartDisabledWhileLoggedIn = true;
           # extras
+          NSGlobalDomain.AppleICUForce24HourTime = true;
+          NSGlobalDomain.AppleFontSmoothing = 2;
+          NSGlobalDomain.AppleInterfaceStyleSwitchesAutomatically = true;
+          NSGlobalDomain.KeyRepeat = 2;
           menuExtraClock.Show24Hour = true;
           screensaver.askForPasswordDelay = 0;
           screensaver.askForPassword = true;
