@@ -23,6 +23,18 @@
       url = "github:cormacrelf/homebrew-tap";
       flake = false;
     };
+    mczachurski-homebrew-wallpapper = {
+      url = "github:/mczachurski/homebrew-wallpapper";
+      flake = false;
+    };
+    kreuzwerker-homebrew-taps = {
+      url = "github:/kreuzwerker/homebrew-taps";
+      flake = false;
+    };
+    powershell-homebrew-tap = {
+      url = "github:/powershell/homebrew-tap";
+      flake = false;
+    };
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew,homebrew-core, homebrew-cask, homebrew-bundle, ... }:
@@ -41,25 +53,48 @@
             pkgs.zoxide
             pkgs.yazi
             pkgs.fzf
-            pkgs.go
             pkgs.gnupg
             pkgs.pinentry-tty
             pkgs.pass
             pkgs.passExtensions.pass-otp
-            pkgs.yq
             pkgs.mpv
             pkgs.yt-dlp
             pkgs.ffmpeg
             pkgs.tmux
+            pkgs.stow
+            pkgs.pre-commit
+            pkgs.curl
+            pkgs.bat
+            pkgs.k9s
+            pkgs.jq
+            pkgs.ripgrep
+            pkgs.imagemagick
+            pkgs.fd
+            pkgs.p7zip
+            pkgs.tflint
+            pkgs.terraform-docs
         ];
       homebrew = {
         enable = true;
           masApps = { 
             "Fantastical" = 975937182;
+            "Debit & Credit" = 882637653;
+            "Slack" = 803453959;
+            "Todoist" = 585829637;
+            "Endel" = 1346247457;
+            "Perplexity" = 6714467650;
           };
         brews = [
             "m1-terraform-provider-helper"
             "mas"
+            "wallpapper"
+            "powershell"
+            "asdf"
+            "azure-cli"
+            "awscli"
+            "yq" # version from nixpkgs didn't work for one of my scripts
+            "helm"
+            "go" # have to install from brew because of tf helper
           ];
         casks = [ 
             "selfcontrol"
@@ -80,7 +115,9 @@
             "termius"
             "the-unarchiver"
           ];
-          #onActivation.cleanup = "zap";
+          onActivation.cleanup = "zap";
+          onActivation.autoUpdate = true;
+          onActivation.upgrade = true;
       };
       fonts.packages = [
           pkgs.nerd-fonts.jetbrains-mono
@@ -109,6 +146,45 @@
             ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
           done
         '';
+      system.defaults = {
+          # dock options
+          dock.autohide = true;
+          dock.autohide-delay = 0.0;
+          dock.autohide-time-modifier = 0.0;
+          dock.orientation = "bottom";
+          dock.appswitcher-all-displays = true;
+          dock.showhidden = true;
+          dock.mineffect = "scale";
+          dock.show-recents = false;
+          dock.minimize-to-application = true;
+          dock.mru-spaces = false;
+          dock.tilesize = 54;
+          dock.persistent-apps = [
+            "/Applications/Arc.app"
+            "/Applications/Fantastical.app"
+            "/Applications/Ferdium.app"
+          ];
+          # finder options
+          finder.ShowPathbar = true;
+          finder.ShowStatusBar = true;
+          finder.FXDefaultSearchScope = "SCcf";
+          finder.FXEnableExtensionChangeWarning = false;
+          finder.FXPreferredViewStyle = "clmv";
+          finder.FXRemoveOldTrashItems = true;
+          # loginwindow options
+          loginwindow.LoginwindowText = "Memento Mori";
+          loginwindow.PowerOffDisabledWhileLoggedIn = true;
+          loginwindow.RestartDisabledWhileLoggedIn = true;
+          # extras
+          menuExtraClock.Show24Hour = true;
+          screensaver.askForPasswordDelay = 0;
+          screensaver.askForPassword = true;
+          trackpad.TrackpadThreeFingerDrag = true;
+      };
+      system = {
+          keyboard.enableKeyMapping = true;
+          keyboard.remapCapsLockToControl = true;
+      };
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
@@ -151,6 +227,9 @@
                 "homebrew/homebrew-core" = homebrew-core;
                 "homebrew/homebrew-cask" = homebrew-cask;
                 "homebrew/homebrew-bundle" = homebrew-bundle;
+                "mczachurski/homebrew-wallpapper" = inputs.mczachurski-homebrew-wallpapper;
+                "kreuzwerker/homebrew-taps" = inputs.kreuzwerker-homebrew-taps;
+                "powershell/homebrew-tap" = inputs.powershell-homebrew-tap;
               };
 
               # Automatically migrate existing Homebrew installations

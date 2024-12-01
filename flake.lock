@@ -99,6 +99,38 @@
         "type": "github"
       }
     },
+    "kreuzwerker-homebrew-taps": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1708001282,
+        "narHash": "sha256-J7ZXiuDJXCsx7UF7YsmcC7ZZcxGl8zoOkaycCFqU1ig=",
+        "owner": "kreuzwerker",
+        "repo": "homebrew-taps",
+        "rev": "6950d794e44ac45e4c4b5619886b57a3600438bf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "kreuzwerker",
+        "repo": "homebrew-taps",
+        "type": "github"
+      }
+    },
+    "mczachurski-homebrew-wallpapper": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1676526986,
+        "narHash": "sha256-T7CeDJ51pjZFo2Q4GsZ4esYYe7b82AFqRI1UZqW+lfU=",
+        "owner": "mczachurski",
+        "repo": "homebrew-wallpapper",
+        "rev": "c75be587e8abea6a455d66e34764ac75c785d0df",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mczachurski",
+        "repo": "homebrew-wallpapper",
+        "type": "github"
+      }
+    },
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
@@ -203,15 +235,34 @@
         "type": "github"
       }
     },
+    "powershell-homebrew-tap": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1730322388,
+        "narHash": "sha256-0ouBso66n5IXowg5s+tad4pQTAlB4noMLHTTWwSHxUs=",
+        "owner": "powershell",
+        "repo": "homebrew-tap",
+        "rev": "b6dae9bd69c033b6173c809206051c56ef7f2849",
+        "type": "github"
+      },
+      "original": {
+        "owner": "powershell",
+        "repo": "homebrew-tap",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "cormacrelf-dark-notify": "cormacrelf-dark-notify",
         "homebrew-bundle": "homebrew-bundle",
         "homebrew-cask": "homebrew-cask",
         "homebrew-core": "homebrew-core",
+        "kreuzwerker-homebrew-taps": "kreuzwerker-homebrew-taps",
+        "mczachurski-homebrew-wallpapper": "mczachurski-homebrew-wallpapper",
         "nix-darwin": "nix-darwin",
         "nix-homebrew": "nix-homebrew",
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": "nixpkgs_3",
+        "powershell-homebrew-tap": "powershell-homebrew-tap"
       }
     },
     "systems": {
