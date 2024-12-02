@@ -95,6 +95,7 @@
             "yq" # version from nixpkgs didn't work for one of my scripts
             "helm"
             "go" # have to install from brew because of tf helper
+            "dark-notify"
           ];
         casks = [ 
             "selfcontrol"
@@ -114,6 +115,7 @@
             "notion"
             "termius"
             "the-unarchiver"
+            "monitorcontrol"
           ];
           onActivation.cleanup = "zap";
           onActivation.autoUpdate = true;
