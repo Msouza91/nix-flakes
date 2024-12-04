@@ -73,6 +73,9 @@
             pkgs.p7zip
             pkgs.tflint
             pkgs.terraform-docs
+            pkgs.steampipe
+            pkgs.steampipePackages.steampipe-plugin-aws
+            pkgs.steampipePackages.steampipe-plugin-azure
         ];
       homebrew = {
         enable = true;
@@ -96,6 +99,7 @@
             "helm"
             "go" # have to install from brew because of tf helper
             "dark-notify"
+            "pam-reattach"
           ];
         casks = [ 
             "selfcontrol"
