@@ -235,6 +235,22 @@
         "type": "github"
       }
     },
+    "powerpipe-homebrew-tap": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1732195771,
+        "narHash": "sha256-4/0EDnIccH/AQzhpg6+NWAxX7Tg7uY+ZFZosxrj9kK8=",
+        "owner": "turbot",
+        "repo": "homebrew-tap",
+        "rev": "6b4e1b08fe28bf1ab3241b66c67505a4b1e093e6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "turbot",
+        "repo": "homebrew-tap",
+        "type": "github"
+      }
+    },
     "powershell-homebrew-tap": {
       "flake": false,
       "locked": {
@@ -262,6 +278,7 @@
         "nix-darwin": "nix-darwin",
         "nix-homebrew": "nix-homebrew",
         "nixpkgs": "nixpkgs_3",
+        "powerpipe-homebrew-tap": "powerpipe-homebrew-tap",
         "powershell-homebrew-tap": "powershell-homebrew-tap"
       }
     },

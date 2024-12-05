@@ -35,6 +35,10 @@
       url = "github:/powershell/homebrew-tap";
       flake = false;
     };
+    powerpipe-homebrew-tap = {
+      url = "github:/turbot/homebrew-tap";
+      flake = false;
+    };
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew,homebrew-core, homebrew-cask, homebrew-bundle, ... }:
@@ -86,6 +90,7 @@
             "Todoist" = 585829637;
             "Endel" = 1346247457;
             "Perplexity" = 6714467650;
+            "Yubico Authenticator" = 1497506650;
           };
         brews = [
             "m1-terraform-provider-helper"
@@ -100,6 +105,7 @@
             "go" # have to install from brew because of tf helper
             "dark-notify"
             "pam-reattach"
+            "powerpipe"
           ];
         casks = [ 
             "selfcontrol"
@@ -240,6 +246,7 @@
                 "mczachurski/homebrew-wallpapper" = inputs.mczachurski-homebrew-wallpapper;
                 "kreuzwerker/homebrew-taps" = inputs.kreuzwerker-homebrew-taps;
                 "powershell/homebrew-tap" = inputs.powershell-homebrew-tap;
+                "turbot/homebrew-tap" = inputs.powerpipe-homebrew-tap;
               };
 
               # Automatically migrate existing Homebrew installations
