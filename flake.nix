@@ -49,8 +49,10 @@
       nixpkgs.config.allowUnfree = true;
       environment.systemPackages =
         [ 
+            pkgs.tree
             pkgs.mkalias
             pkgs.neovim
+            pkgs.lazygit
             pkgs.obsidian
             pkgs.wget
             #pkgs.calibre
@@ -80,6 +82,7 @@
             pkgs.steampipe
             pkgs.steampipePackages.steampipe-plugin-aws
             pkgs.steampipePackages.steampipe-plugin-azure
+            pkgs.dotnetCorePackages.dotnet_9.sdk
         ];
       homebrew = {
         enable = true;
@@ -132,7 +135,7 @@
           onActivation.upgrade = true;
       };
       fonts.packages = [
-          pkgs.nerd-fonts.jetbrains-mono
+          pkgs.maple-mono-NF
           pkgs.nerd-fonts.iosevka
           pkgs.nerd-fonts.iosevka-term
           pkgs.nerd-fonts.symbols-only
