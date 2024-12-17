@@ -111,6 +111,7 @@
             "powerpipe"
           ];
         casks = [ 
+            "arc"
             "selfcontrol"
             "upscayl"
             "1password"
@@ -178,6 +179,8 @@
             "/Applications/Arc.app"
             "/Applications/Fantastical.app"
             "/Applications/Ferdium.app"
+            "/System/Applications/Messages.app"
+            "/System/Applications/Mail.app"
           ];
           # finder options
           finder.ShowPathbar = true;
