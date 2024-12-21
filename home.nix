@@ -6,6 +6,7 @@
   
   # Enable home-manager
   programs.home-manager.enable = true;
+  nixpkgs.config.allowUnfree = true;
 
   # Just specify packages you want installed
   home.packages = with pkgs; [
