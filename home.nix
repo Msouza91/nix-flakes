@@ -34,6 +34,7 @@
     curl
     bat
     eza
+    zsh
     k9s
     jq
     ripgrep
