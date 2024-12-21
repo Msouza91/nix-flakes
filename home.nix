@@ -33,6 +33,7 @@
     pre-commit
     curl
     bat
+    eza
     k9s
     jq
     ripgrep
