@@ -42,8 +42,8 @@
     tflint
     terraform-docs
     steampipe
-    steampipePackages.steampipe-plugin-aws
-    steampipePackages.steampipe-plugin-azure
+    (lib.hiPrio steampipe-plugin-azure)
+    steampipe-plugin-aws
     dotnetCorePackages.dotnet_9.sdk
     # Add more packages here
   ];
