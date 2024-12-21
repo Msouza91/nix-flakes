@@ -9,7 +9,8 @@
 
   # Just specify packages you want installed
   home.packages = with pkgs; [
-    neofetch
+    neovim
+    stow
     # Add more packages here
   ];
 }
