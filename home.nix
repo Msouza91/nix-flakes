@@ -13,7 +13,6 @@
     stow
     git
     tree
-    mkalias
     lazygit
     obsidian
     wget
