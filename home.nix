@@ -11,6 +11,40 @@
   home.packages = with pkgs; [
     neovim
     stow
+    git
+    tree
+    mkalias
+    lazygit
+    obsidian
+    wget
+    calibre
+    zoxide
+    yazi
+    fzf
+    gnupg
+    pinentry-tty
+    pass
+    passExtensions.pass-otp
+    mpv
+    yt-dlp
+    ffmpeg
+    tmux
+    stow
+    pre-commit
+    curl
+    bat
+    k9s
+    jq
+    ripgrep
+    imagemagick
+    fd
+    p7zip
+    tflint
+    terraform-docs
+    steampipe
+    steampipePackages.steampipe-plugin-aws
+    steampipePackages.steampipe-plugin-azure
+    dotnetCorePackages.dotnet_9.sdk
     # Add more packages here
   ];
 }
