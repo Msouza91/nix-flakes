@@ -97,6 +97,8 @@
           };
         brews = [
             "m1-terraform-provider-helper"
+            "gh"
+            "glow"
             "mas"
             "wallpapper"
             "powershell"
@@ -112,6 +114,7 @@
           ];
         casks = [ 
             "arc"
+            "ghostty"
             "selfcontrol"
             "upscayl"
             "1password"
@@ -122,7 +125,6 @@
             "font-sf-pro"
             "iina"
             "mac-mouse-fix"
-            "wezterm@nightly"
             "background-music"
             "handbrake"
             "keycastr"
