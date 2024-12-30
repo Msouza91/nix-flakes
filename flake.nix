@@ -179,6 +179,7 @@
           dock.tilesize = 54;
           dock.persistent-apps = [
             "/Applications/Arc.app"
+            "/Applications/Ghostty.app"
             "/Applications/Fantastical.app"
             "/Applications/Ferdium.app"
             "/System/Applications/Messages.app"
