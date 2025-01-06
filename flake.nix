@@ -89,6 +89,7 @@
           masApps = { 
             "Fantastical" = 975937182;
             "Debit & Credit" = 882637653;
+            "Drafts" = 1435957248;
             "Slack" = 803453959;
             "Todoist" = 585829637;
             "Endel" = 1346247457;
@@ -111,6 +112,7 @@
             "dark-notify"
             "pam-reattach"
             "powerpipe"
+            "jordanbaird-ice"
           ];
         casks = [ 
             "arc"
@@ -120,7 +122,6 @@
             "1password-cli"
             "ferdium"
             "font-sf-pro"
-            "hiddenbar"
             "iina"
             "mac-mouse-fix"
             "mouseless"
@@ -128,6 +129,7 @@
             "handbrake"
             "keycastr"
             "notion"
+            "postman"
             "termius"
             "the-unarchiver"
             "monitorcontrol"
