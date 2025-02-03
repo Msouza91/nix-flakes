@@ -87,13 +87,10 @@
       homebrew = {
         enable = true;
           masApps = { 
-            "Fantastical" = 975937182;
             "Debit & Credit" = 882637653;
             "Drafts" = 1435957248;
-            "Slack" = 803453959;
             "Todoist" = 585829637;
             "Endel" = 1346247457;
-            "Perplexity" = 6714467650;
             "Yubico Authenticator" = 1497506650;
           };
         brews = [
@@ -116,8 +113,8 @@
           ];
         casks = [ 
             "arc"
+            "anydesk"
             "ghostty"
-            "selfcontrol"
             "1password"
             "1password-cli"
             "ferdium"
@@ -181,8 +178,7 @@
           dock.persistent-apps = [
             "/Applications/Arc.app"
             "/Applications/Ghostty.app"
-            "/Applications/Fantastical.app"
-            "/Applications/Ferdium.app"
+            "/System/Applications/Calendar.app"
             "/System/Applications/Messages.app"
             "/System/Applications/Mail.app"
           ];
