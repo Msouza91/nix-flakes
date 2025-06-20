@@ -104,6 +104,7 @@
             "helm"
             "hugo"
             "jordanbaird-ice"
+            "lua"
             "m1-terraform-provider-helper"
             "mas"
             "powershell"
@@ -117,6 +118,7 @@
         casks = [ 
             "anydesk"
             "aerospace"
+            "firefox"
             "ghostty"
             "1password"
             "1password-cli"
@@ -177,7 +179,7 @@
           dock.mru-spaces = false;
           dock.tilesize = 54;
           dock.persistent-apps = [
-            "/Applications/Dia.app"
+            "/Applications/Firefox.app"
             "/Applications/Warp.app"
             "/System/Applications/Calendar.app"
             "/System/Applications/Messages.app"
