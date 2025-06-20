@@ -39,6 +39,10 @@
       url = "github:/turbot/homebrew-tap";
       flake = false;
     };
+    aerospace-homebrew-tap = {
+      url = "github:/nikitabobko/homebrew-tap";
+      flake = false;
+    };
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew,homebrew-core, homebrew-cask, homebrew-bundle, ... }:
@@ -46,6 +50,7 @@
     configuration = { pkgs, config, ... }: {
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
+      system.primaryUser = "marcos";
       nixpkgs.config.allowUnfree = true;
       environment.systemPackages =
         [ 
@@ -53,9 +58,7 @@
             pkgs.mkalias
             pkgs.neovim
             pkgs.lazygit
-            pkgs.obsidian
             pkgs.wget
-            #pkgs.calibre
             pkgs.zoxide
             pkgs.yazi
             pkgs.fzf
@@ -87,56 +90,54 @@
       homebrew = {
         enable = true;
           masApps = { 
-            "Debit & Credit" = 882637653;
-            "Drafts" = 1435957248;
-            "Todoist" = 585829637;
-            "Endel" = 1346247457;
             "Yubico Authenticator" = 1497506650;
           };
         brews = [
-            "m1-terraform-provider-helper"
+            "asdf"
+            "awscli"
+            "azure-cli"
+            "borders"
+            "dark-notify"
+            "go" # have to install from brew because of tf helper
             "gh"
             "glow"
-            "mas"
-            "wallpapper"
-            "powershell"
-            "asdf"
-            "azure-cli"
-            "awscli"
-            "yq" # version from nixpkgs didn't work for one of my scripts
             "helm"
-            "go" # have to install from brew because of tf helper
-            "dark-notify"
+            "hugo"
+            "jordanbaird-ice"
+            "m1-terraform-provider-helper"
+            "mas"
+            "powershell"
             "pam-reattach"
             "powerpipe"
-            "jordanbaird-ice"
+            "terragrunt"
+            "sketchybar"
+            "yq" # version from nixpkgs didn't work for one of my scripts
+            "wallpapper"
           ];
         casks = [ 
-            "arc"
             "anydesk"
+            "aerospace"
             "ghostty"
             "1password"
             "1password-cli"
             "ferdium"
             "font-sf-pro"
             "iina"
+            "keepassxc"
             "mac-mouse-fix"
             "mouseless"
             "background-music"
             "handbrake"
-            "keycastr"
-            "notion"
-            "postman"
-            "termius"
             "the-unarchiver"
             "monitorcontrol"
+            "warp"
           ];
           onActivation.cleanup = "zap";
           onActivation.autoUpdate = true;
           onActivation.upgrade = true;
       };
       fonts.packages = [
-          pkgs.maple-mono-NF
+          pkgs.maple-mono.NF
           pkgs.nerd-fonts.iosevka
           pkgs.nerd-fonts.iosevka-term
           pkgs.nerd-fonts.symbols-only
@@ -176,8 +177,8 @@
           dock.mru-spaces = false;
           dock.tilesize = 54;
           dock.persistent-apps = [
-            "/Applications/Arc.app"
-            "/Applications/Ghostty.app"
+            "/Applications/Dia.app"
+            "/Applications/Warp.app"
             "/System/Applications/Calendar.app"
             "/System/Applications/Messages.app"
             "/System/Applications/Mail.app"
@@ -198,6 +199,8 @@
           NSGlobalDomain.AppleFontSmoothing = 2;
           NSGlobalDomain.AppleInterfaceStyleSwitchesAutomatically = true;
           NSGlobalDomain.KeyRepeat = 2;
+          NSGlobalDomain._HIHideMenuBar = true;
+          NSGlobalDomain."com.apple.mouse.tapBehavior" = 1;
           menuExtraClock.Show24Hour = true;
           screensaver.askForPasswordDelay = 0;
           screensaver.askForPassword = true;
@@ -253,6 +256,7 @@
                 "kreuzwerker/homebrew-taps" = inputs.kreuzwerker-homebrew-taps;
                 "powershell/homebrew-tap" = inputs.powershell-homebrew-tap;
                 "turbot/homebrew-tap" = inputs.powerpipe-homebrew-tap;
+                "nikitabobko/homebrew-tap" = inputs.aerospace-homebrew-tap;
               };
 
               # Automatically migrate existing Homebrew installations
