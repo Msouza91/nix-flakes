@@ -43,6 +43,10 @@
       url = "github:/nikitabobko/homebrew-tap";
       flake = false;
     };
+    emacs-plus-homebrew-tap = {
+      url = "github:/d12frosted/homebrew-emacs-plus";
+      flake = false;
+    };
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew,homebrew-core, homebrew-cask, homebrew-bundle, ... }:
@@ -98,6 +102,7 @@
             "azure-cli"
             "borders"
             "dark-notify"
+            "emacs-plus"
             "go" # have to install from brew because of tf helper
             "gh"
             "glow"
@@ -259,6 +264,7 @@
                 "powershell/homebrew-tap" = inputs.powershell-homebrew-tap;
                 "turbot/homebrew-tap" = inputs.powerpipe-homebrew-tap;
                 "nikitabobko/homebrew-tap" = inputs.aerospace-homebrew-tap;
+                "emacs-plus/homebrew-tap" = inputs.emacs-plus-homebrew-tap;
               };
 
               # Automatically migrate existing Homebrew installations

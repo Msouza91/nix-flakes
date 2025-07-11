@@ -49,6 +49,22 @@
         "type": "github"
       }
     },
+    "emacs-plus-homebrew-tap": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1743441558,
+        "narHash": "sha256-Eepinxv05Yl79AoPVJveGDZPKHhlAes7XtUvrssflrU=",
+        "owner": "d12frosted",
+        "repo": "homebrew-emacs-plus",
+        "rev": "3e95d573d5f13aba7808193b66312b38a7c66851",
+        "type": "github"
+      },
+      "original": {
+        "owner": "d12frosted",
+        "repo": "homebrew-emacs-plus",
+        "type": "github"
+      }
+    },
     "homebrew-bundle": {
       "flake": false,
       "locked": {
@@ -268,6 +284,7 @@
       "inputs": {
         "aerospace-homebrew-tap": "aerospace-homebrew-tap",
         "cormacrelf-dark-notify": "cormacrelf-dark-notify",
+        "emacs-plus-homebrew-tap": "emacs-plus-homebrew-tap",
         "homebrew-bundle": "homebrew-bundle",
         "homebrew-cask": "homebrew-cask",
         "homebrew-core": "homebrew-core",
